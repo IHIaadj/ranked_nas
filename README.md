@@ -1,4 +1,4 @@
-# ranked_nas
+# Rank-Preserving Surrogate Model
 NAS using a surrogate prediction that preserves ranking of the different architectures. 
 
 # Add Benchmark files 
