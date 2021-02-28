@@ -1,5 +1,16 @@
 # Rank-Preserving Surrogate Model
-NAS using a surrogate prediction that preserves ranking of the different architectures. 
+To speed up Neural Architecture Search (NAS) algorithms, several existing approaches use surrogate models that predict the neural architectures' precision instead of training each sampled one. However, these approaches do not preserve the ranking between different architectures. This repository includes the code for RS-NAS. Surrogate models trained specifically to preserve the ranking and score the architectures for NAS. Our code is heavily inspired by NAS-Bench-301 and we include its code as a submodule to execute the tests and experimentations. 
+
+
+# Surrogate Models 
+We tested 5 different surrogate models: 
+* MLP 
+* GCN
+* GIN
+* LGBoost 
+* XGBoost 
+
+For each one of them, there's a separate training script with the dedicated hyperparameters. You can find the relative code in the folder '/surrogate_models/$MODEL_NAME' 
 
 # Add Benchmark files 
 Include these downloaded file in a folder 'nas_benchmark' at the root of the project directory. 
