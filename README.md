@@ -1,6 +1,8 @@
 # Rank-Preserving Surrogate Model
 To speed up Neural Architecture Search (NAS) algorithms, several existing approaches use surrogate models that predict the neural architectures' precision instead of training each sampled one. However, these approaches do not preserve the ranking between different architectures. This repository includes the code for RS-NAS. Surrogate models trained specifically to preserve the ranking and score the architectures for NAS. Our code is heavily inspired by NAS-Bench-301 and we include its code as a submodule to execute the tests and experimentations. 
 
+Weights of each model will be available : [RS_NAS_Models_1.0.zip](https://figshare.com/articles/dataset/RS_NAS_models_1_0/14134847)
+
 
 # Surrogate Models 
 We tested 5 different surrogate models: 
