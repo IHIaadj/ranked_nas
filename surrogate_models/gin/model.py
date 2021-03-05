@@ -18,7 +18,7 @@ def graph_pooling(inputs, num_vertices):
     return torch.div(out, num_vertices.unsqueeze(-1).expand_as(out))
 
 
-class DirectedGraphConvolution(nn.Module):
+class IsomorphismGraphNetwork(nn.Module):
     def __init__(self, in_features, out_features):
         super().__init__()
         self.in_features = in_features

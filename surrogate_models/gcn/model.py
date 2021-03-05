@@ -46,7 +46,6 @@ class DirectedGraphConvolution(nn.Module):
                + str(self.in_features) + ' -> ' \
                + str(self.out_features) + ')'
 
-# if nasbench-101: initial_hidden=5. if nasbench-201: initial_hidden=7
 class NeuralPredictor(nn.Module):
     def __init__(self, initial_hidden=5, gcn_hidden=144, gcn_layers=4, linear_hidden=128):
         super().__init__()
@@ -61,7 +60,7 @@ class NeuralPredictor(nn.Module):
         numv, adj, out = inputs["num_vertices"], inputs["adjacency"], inputs["operations"]
         gs = adj.size(1)  # graph node number
 
-        adj_with_diag = normalize_adj(adj + torch.eye(gs, device=adj.device))  # assuming diagonal is not 1
+        adj_with_diag = normalize_adj(adj + torch.eye(gs, device=adj.device)) 
         for layer in self.gcn:
             out = layer(out, adj_with_diag)
         out = graph_pooling(out, numv)
